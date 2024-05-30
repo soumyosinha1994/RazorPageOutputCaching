@@ -1,0 +1,40 @@
+﻿@page 
+@model RazorPageOutputCaching.Pages.HomeModel
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-primary">
+                Employee List
+            </h2>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Employee Name
+                </th>
+                <th>
+                    Employee Address
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model.employees)
+            {
+                <tr>
+                    <td>@obj.Name</td>
+                    <td>
+                        @obj.Address
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
